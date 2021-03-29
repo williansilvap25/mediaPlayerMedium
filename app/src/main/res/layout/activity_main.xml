@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/song1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bloqueia Eu - Dj Lucas Beat"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:onClick="song1"/>
+
+    <Button
+        android:id="@+id/song2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disco Arranhado - Dj Lucas Beat"
+        android:layout_below="@+id/song1"
+        android:layout_centerHorizontal="true"
+        android:onClick="song2"/>
+
+    <Button
+        android:id="@+id/song3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coração Stand By - Dj Lucas Beat"
+        android:layout_below="@+id/song2"
+        android:layout_centerHorizontal="true"
+        android:onClick="song3"/>
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timeMusicLayout"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timeMusicLayout"
+        android:layout_alignParentRight="true"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/timeMusicLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/timeMusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeMusicLayout">
+
+        <!--<ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:onClick="previous"
+            android:src="@drawable/previous" />-->
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:onClick="play"
+            android:src="@drawable/play" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:onClick="pause"
+            android:src="@drawable/pause" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:onClick="stop"
+            android:src="@drawable/stop" />
+
+        <!--<ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="@android:integer/config_longAnimTime"
+            android:onClick="next"
+            android:src="@drawable/next" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>
